@@ -1,0 +1,41 @@
+// <div class="centered-content">
+//   <div class="task-manager-container">
+//     <div class="sidebar">
+//       <h1 class="title has-text-primary">Lists</h1>
+//     </div>
+//     <div class="task-list-container">
+//       <h1 class="title has-text-primary">Lists</h1>
+//     </div>
+//   </div>
+// </div>
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.task-manager-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 680px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: #fff;
+    padding: 42px;
+    border-radius: 8px;
+}
+
+.task-list-container {
+    display: flex;
+    flex-grow: 1;
+    background: #fff;
+}
