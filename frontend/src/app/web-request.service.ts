@@ -17,7 +17,6 @@ export class WebRequestService {
   }
 
   post(uri: string, payload: Object) {
-    console.log(`${this.ROOT_URL}/${uri}`)
     return this.http.post(`${this.ROOT_URL}/${uri}`, payload)
   }
 
