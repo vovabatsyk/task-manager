@@ -4,5 +4,7 @@ export class Task {
   // @ts-ignore
   title: string
   // @ts-ignore
-  listId: string
+  _listId: string
+  // @ts-ignore
+  completed: Boolean
 }

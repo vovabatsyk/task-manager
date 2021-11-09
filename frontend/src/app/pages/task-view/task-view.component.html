@@ -12,7 +12,7 @@
 
     <div class="task-list-container has-background-white-ter">
       <h1 class="title has-text-primary">Tasks</h1>
-      <div class="task" *ngFor="let task of tasks">
+      <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{'completed': task.completed}">
         <p>{{task.title}}</p>
       </div>
       <button class="button circle-add-button has-text-white is-primary" routerLink="./new-task">+</button>
