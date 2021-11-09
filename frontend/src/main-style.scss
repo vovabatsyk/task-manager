@@ -6,7 +6,7 @@ $dark-green: rgb(0, 100, 88);
 $light: #f8f8f8;
 
 $family-sans-serif: "Nunito", sans-serif;
-$primary: #d32626;
+$primary: #d77272;
 
 $link: $light-green;
 
@@ -28,4 +28,11 @@ html, body {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
