@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {TaskService} from '../../task.service'
 import {Router} from '@angular/router'
+import {List} from '../../models/list.model'
 
 @Component({
   selector: 'app-new-list',
@@ -16,8 +17,9 @@ export class NewListComponent implements OnInit {
   }
 
   createList(title: string) {
-    this.taskService.createList(title).subscribe((response: any) => {
-      this.router.navigate([''])
+    // @ts-ignore
+    this.taskService.createList(title).subscribe((list: List) => {
+      this.router.navigate(['/lists', list._id])
     })
   }
 
