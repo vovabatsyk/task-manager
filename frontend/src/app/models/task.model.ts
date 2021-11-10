@@ -1,10 +1,6 @@
-export class Task {
-  // @ts-ignore
-  _id: string
-  // @ts-ignore
-  title: string
-  // @ts-ignore
-  _listId: string
-  // @ts-ignore
-  completed: Boolean
+export interface Task {
+  _id: String;
+  title: String;
+  _listId: String;
+  completed: Boolean;
 }
