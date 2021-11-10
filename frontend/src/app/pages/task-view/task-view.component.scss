@@ -58,7 +58,6 @@
   margin-top: 10px;
 
   &:not(.complete) {
-
     cursor: pointer;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 
@@ -87,3 +86,8 @@
   font-size: 30px;
 }
 
+.empty-state-text {
+  font-size: 20px;
+  color: #777;
+  text-align: center;
+}

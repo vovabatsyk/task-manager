@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@400;700&display=swap");
 
 $turquoise: #44ddd0;
 $light-green: #45f69a;
@@ -18,7 +18,8 @@ html {
   background: linear-gradient(to right bottom, $turquoise, $primary);
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -31,8 +32,17 @@ html, body {
 }
 
 .title {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.white-box {
+  min-height: 220px;
+  width: 100%;
+  max-width: 380px;
+  background: #ffff;
+  border-radius: 5px;
+  padding: 35px;
 }
