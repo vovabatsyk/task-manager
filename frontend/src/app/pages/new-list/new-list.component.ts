@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../task.service';
+import { TaskService } from '../../services/task.service';
 import { Router } from '@angular/router';
 import { List } from '../../models/list.model';
 
