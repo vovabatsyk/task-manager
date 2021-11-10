@@ -37,3 +37,12 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+.white-box {
+  min-height: 220px;
+  width: 100%;
+  max-width: 380px;
+  background: #ffff;
+  border-radius: 5px;
+  padding: 35px;
+}
