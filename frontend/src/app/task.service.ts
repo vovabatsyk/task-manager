@@ -1,34 +1,32 @@
-import {Injectable} from '@angular/core'
-import {WebRequestService} from './web-request.service'
-import {Task} from './models/task.model'
+import { Injectable } from '@angular/core';
+import { WebRequestService } from './web-request.service';
+import { Task } from './models/task.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-
-  constructor(private webReqService: WebRequestService) {
-  }
+  constructor(private webReqService: WebRequestService) {}
 
   createList(title: string) {
-    return this.webReqService.post('lists', {title})
+    return this.webReqService.post('lists', { title });
   }
 
   getLists() {
-    return this.webReqService.get('lists')
+    return this.webReqService.get('lists');
   }
 
   getTasks(listId: string) {
-    return this.webReqService.get(`lists/${listId}/tasks`)
+    return this.webReqService.get(`lists/${listId}/tasks`);
   }
 
-  createTask(title: string, listId:string) {
-    return this.webReqService.post(`lists/${listId}/tasks`, {title})
+  createTask(title: string, listId: string) {
+    return this.webReqService.post(`lists/${listId}/tasks`, { title });
   }
 
   completeTask(task: Task) {
     return this.webReqService.patch(`lists/${task._listId}/tasks/${task._id}`, {
-      completed: !task.completed
-    })
+      completed: !task.completed,
+    });
   }
 }

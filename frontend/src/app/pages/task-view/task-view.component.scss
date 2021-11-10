@@ -58,7 +58,6 @@
   margin-top: 10px;
 
   &:not(.complete) {
-
     cursor: pointer;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 
@@ -86,4 +85,3 @@
   border-radius: 50%;
   font-size: 30px;
 }
-

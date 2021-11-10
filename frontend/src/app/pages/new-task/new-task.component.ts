@@ -13,8 +13,7 @@ export class NewTaskComponent implements OnInit {
   constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router) {
   }
 
-  // @ts-ignore
-  listId: string
+  listId: string = ''
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
@@ -23,8 +22,7 @@ export class NewTaskComponent implements OnInit {
   }
 
   createTask(title: string) {
-    // @ts-ignore
-    this.taskService.createTask(title, this.listId).subscribe((newTask: Task) => {
+    this.taskService.createTask(title, this.listId).subscribe(() => {
       this.router.navigate(['../'], {relativeTo: this.route})
     })
   }
