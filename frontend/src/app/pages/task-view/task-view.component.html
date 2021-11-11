@@ -51,10 +51,7 @@
             <p>{{ task.title }}</p>
           </div>
           <div class="task-buttons">
-            <button class="button is-warning mr-2">
-              <span class="icon"><i class="fas fa-edit"></i></span>
-            </button>
-            <button class="button is-danger">
+            <button class="button is-danger" (click)="onTaskDeleteClick(task._id)">
               <span class="icon"><i class="fas fa-trash"></i></span>
             </button>
           </div>

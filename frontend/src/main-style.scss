@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@400;700&display=swap");
 
 $turquoise: #44ddd0;
-$light-green: #45f69a;
+$light-blue: #5eb1e5;
 $dark-green: rgb(0, 100, 88);
 $light: #f8f8f8;
 
 $family-sans-serif: "Nunito", sans-serif;
 $primary: #d77272;
 
-$link: $light-green;
+$link: $light-blue;
 
 $control-border-width: 2px;
 $input-border-color: transparent;
@@ -49,7 +49,7 @@ body {
 .white-box {
   min-height: 220px;
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   background: #ffff;
   border-radius: 5px;
   padding: 35px;
