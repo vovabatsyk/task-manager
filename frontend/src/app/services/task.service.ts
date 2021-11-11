@@ -6,7 +6,8 @@ import { Task } from '../models/task.model';
   providedIn: 'root',
 })
 export class TaskService {
-  constructor(private webReqService: WebRequestService) {}
+  constructor(private webReqService: WebRequestService) {
+  }
 
   createList(title: string) {
     return this.webReqService.post('lists', { title });
@@ -28,5 +29,13 @@ export class TaskService {
     return this.webReqService.patch(`lists/${task._listId}/tasks/${task._id}`, {
       completed: !task.completed,
     });
+  }
+
+  deleteList(id: string) {
+    return this.webReqService.delete(`lists/${id}`);
+  }
+
+  updateList(id: string, title: string) {
+    return this.webReqService.patch(`lists/${id}`, {title})
   }
 }
