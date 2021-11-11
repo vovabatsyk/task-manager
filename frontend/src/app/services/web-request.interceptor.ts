@@ -1,14 +1,13 @@
-import {Injectable} from '@angular/core';
-import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
-import {empty, Observable, throwError} from 'rxjs';
-import {AuthService} from './auth.service';
-import {catchError, switchMap, tap} from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { empty, Observable, Subject, throwError } from 'rxjs';
+import { AuthService } from './auth.service';
+import { catchError, switchMap, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WebRequestInterceptor implements HttpInterceptor {
-
   constructor(private authService: AuthService) {
   }
 
@@ -30,7 +29,6 @@ export class WebRequestInterceptor implements HttpInterceptor {
               throwError(err);
               this.authService.logout();
               return empty();
-
             }),
           );
         }

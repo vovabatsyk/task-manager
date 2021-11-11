@@ -20,14 +20,44 @@
 
     <div class="task-list-container has-background-white-ter">
       <div *ngIf="tasks; else noTasks">
-        <h1 class="title has-text-primary">Tasks</h1>
+        <div class="top-bar">
+          <h1 class="title has-text-primary">Tasks</h1>
+          <div class="dropdown is-hoverable is-right">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true">
+                <span class="icon is-small">
+                 <i class="fas fa-cog" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content">
+                <a routerLink="edit-list" class="dropdown-item">
+                  Edit
+                </a>
+                <a (click)="onDeleteListClick()" class="dropdown-item has-text-danger">
+                  Delete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           class="task"
           *ngFor="let task of tasks"
-          (click)="onTaskClick(task)"
           [ngClass]="{ completed: task.completed }"
         >
-          <p>{{ task.title }}</p>
+          <div class="task-text" (click)="onTaskClick(task)">
+            <p>{{ task.title }}</p>
+          </div>
+          <div class="task-buttons">
+            <button class="button is-warning mr-2">
+              <span class="icon"><i class="fas fa-edit"></i></span>
+            </button>
+            <button class="button is-danger">
+              <span class="icon"><i class="fas fa-trash"></i></span>
+            </button>
+          </div>
         </div>
 
         <h3 class="empty-state-text" *ngIf="tasks.length === 0">There are no tasks here.</h3>
